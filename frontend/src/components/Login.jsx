@@ -26,7 +26,7 @@ const Login = () => {
         e.preventDefault();
         try {
             setLoading(true);
-            const res = await axios.post('https://instaclone-g9h5.onrender.com/api/v1/user/login', input, {
+            const res = await axios.post('http://localhost:8000/api/v1/user/login', input, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -92,7 +92,7 @@ const Login = () => {
                     )
                 }
 
-                <span className='text-center'>Dosent have an account? <Link to="/signup" className='text-blue-600'>Signup</Link></span>
+                <span className='text-center'> Join here <Link to="/signup" className='text-blue-600'>Signup</Link></span>
             </form>
         </div>
     )
